@@ -61,7 +61,7 @@ class FunctionsTest < MiniTest::Test
     result = number_to_full_month_name( 9 )
     assert_equal( "September", result )
   end
-  
+
   def test_number_to_short_month_name__month_1()
     first_month_string = number_to_short_month_name( 1 )
     assert_equal( "Jan", first_month_string )
@@ -87,12 +87,14 @@ class FunctionsTest < MiniTest::Test
 
   #Given the radius of a sphere calculate the volume
   def test_volume_of_sphere()
-    #add test code here
+    result = volume_of_sphere(3)
+    assert_equal(113.1, result)
   end
 
   #Given a value in farenheit, convert this into celsius.
   def test_fahrenheit_to_celsius()
-    #add test code here
+    result = fahrenheit_to_celsius(45)
+    assert_equal(7.22222, result)
   end
 
 
