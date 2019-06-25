@@ -61,7 +61,7 @@ class FunctionsTest < MiniTest::Test
     result = number_to_full_month_name( 9 )
     assert_equal( "September", result )
   end
-
+  
   def test_number_to_short_month_name__month_1()
     first_month_string = number_to_short_month_name( 1 )
     assert_equal( "Jan", first_month_string )
@@ -81,7 +81,8 @@ class FunctionsTest < MiniTest::Test
 
   #Given the length of a side of a cube calculate the volume
   def test_volume_of_cube()
-    result = volume_of_cube()
+    result = volume_of_cube(4)
+    assert_equal(64, result)
   end
 
   #Given the radius of a sphere calculate the volume

@@ -25,7 +25,7 @@ end
 
 
 def join_string(string1, string2)
-  return string1 + string_2
+  return string1 + string2
 end
 
 def add_string_as_number(string1, string2)
@@ -34,8 +34,8 @@ end
 
 
 def number_to_full_month_name(number)
+  month =   case number
 
-  case number
   when 1
     p "January"
   when 2
@@ -61,11 +61,16 @@ def number_to_full_month_name(number)
   when 12
     p "December"
   end
-  return number
+  return month
 end
 
 
 def number_to_short_month_name(number)
   result= number_to_full_month_name(number)
-  return result.slice(3)
+  return result.slice(0..2)
+end
+
+
+def volume_of_cube(length)
+  return length **3
 end
